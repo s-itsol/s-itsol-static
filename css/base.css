@@ -1,0 +1,319 @@
+
+/* -- 全体 ------------------------------------------------------------------ */
+
+/* ボディタグ */
+body {
+	background-color: white;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+	font-size: medium;
+	margin: 0px;
+}
+
+/* -- 共通ヘッダ ------------------------------------------------------------ */
+.commonHeader {
+}
+
+/* ヘッダーロゴ */
+.headerLogo {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.headerLogo a {
+	text-decoration: none;
+}
+.headerLogo img {
+	width: 100%;
+	height: auto;
+	max-width: 490px;
+	max-height: 100px;
+}
+
+/* ロゴ-フッタ */
+.logoFooter {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.logoFooter img {
+	width: 100%;
+	height: 24px;
+	max-width: 100%;
+}
+
+/* ヘッダーメニュー */
+.headerMenu {
+	width: 100%;
+	height: 24px;
+	max-width: 960px;
+	margin: 0px;
+	padding: 0px;
+}
+.headerMenu li {
+	display: block;
+	float: left;
+	width: 25%;
+	margin: 0px;
+	padding: 0px;
+}
+.headerMenu a {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	color: #444444;
+	width: 100%;
+	border-radius: 4px;
+	text-align: center;
+	vertical-align:top;
+	overflow: hidden;
+	font-weight: bold;
+	background-image: -webkit-linear-gradient(#eeeedd 0%, #aaaaaa 100%);
+	background-image: linear-gradient(#eeeedd 0%, #aaaaaa 100%);
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+	margin-right: -6;
+}
+/* メニューボタン押下時 */
+.headerMenu a:active {
+	-ms-transform: translateY(2px);
+	-webkit-transform: translateY(2px);
+	transform: translateY(2px);				/*沈むように*/
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	background-image: -webkit-linear-gradient(#eeeedd 0%, #bbbbbb 100%);
+	background-image: linear-gradient(#eeeedd 0%, #bbbbbb 100%);		/*グラデーションを明るく*/
+}
+/* 横幅一定以下 */
+@media only screen and (max-width: 440px) {
+	.headerMenu {
+		height: 48px;
+	}
+	.headerMenu li {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 220px) {
+	.headerMenu {
+		height: 96px;
+	}
+	.headerMenu li {
+		width: 100%;
+	}
+}
+
+/* -- コンテンツ ------------------------------------------------------------ */
+.contents {
+	padding: 16px;
+}
+/* 横幅一定以下 */
+@media only screen and (max-width: 440px) {
+	.contents {
+		padding-top: 12px;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+
+/* フローメッセージ */
+.flowMessage {
+	margin-bottom: 8px;
+}
+
+/* インデックスページ項目 */
+.indexItem {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 12px;
+}
+.indexItem dt {
+	font-weight: bold;
+}
+.indexItem dd {
+	margin-left: 12px;
+	margin-bottom: 8px;
+}
+
+/* ニュース */
+.news {
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 12px;
+}
+.news marquee {
+	width: 120px;
+	font-weight: bold;
+	font-style: italic;
+}
+.news dl {
+	margin-left: 12px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.news dt {
+	margin-top: 0px;
+}
+.news dd {
+	margin-left: 12px;
+	margin-bottom: 4px;
+}
+
+/* -- その他ページ ---------------------------------------------------------- */
+/* パンくず */
+.bread {
+	margin-bottom: 8px;
+}
+
+/* コンテンツタイトル */
+.contentsTitle {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+/* 通常テーブル */
+.nomalTbl {
+	margin-top: 8px;
+}
+.nomalTbl table {
+	border-collapse: separate;
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+	table-layout: fixed;
+}
+.nomalTbl tr {
+}
+.nomalTbl th {
+	color: white;
+	background: midnightblue;
+	width: 108px;
+	height: auto;
+	padding: 1px;
+	font-weight: normal;
+	text-align: left;
+}
+.nomalTbl td {
+	border-width: 1;
+	border-color: black;
+	border-style: solid;
+	background: lightyellow;
+}
+/* 横幅一定以下 */
+@media screen and (max-width: 440px) {
+	.nomalTbl table {
+		border-collapse: separate;
+		width: 100%;
+	}
+	.nomalTbl tr {
+		display: block;
+		border-width: 1;
+		border-color: black;
+		border-style: solid;
+		background: lightyellow;
+		margin-bottom: 2px;
+	}
+	.nomalTbl th {
+		display: block;
+		margin: 2px;
+		width: auto;
+	}
+	.nomalTbl td {
+		display: block;
+		border-style: none;
+	}
+}
+
+/* 業務経歴テーブル */
+.keirekiTbl {
+	margin-top: 8px;
+}
+.keirekiTbl table {
+	border-collapse: separate;
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+	min-width: 768px;
+	table-layout: fixed;
+}
+.keirekiTbl thead {
+}
+.keirekiTbl th {
+	color: white;
+	background: midnightblue;
+	width: auto;
+	height: auto;
+	padding: 1px;
+	font-weight: normal;
+	text-align: left;
+}
+.keirekiTbl th.term {
+	width: 88px;
+}
+.keirekiTbl th.details {
+}
+.keirekiTbl th.langs {
+	width: 136px;
+}
+.keirekiTbl th.machine {
+	width: 168px;
+}
+.keirekiTbl th.role {
+	width: 136px;
+}
+.keirekiTbl tbody th {
+	display: none;
+}
+.keirekiTbl tr {
+}
+.keirekiTbl td {
+	border-width: 1;
+	border-color: black;
+	border-style: solid;
+	background: lightyellow;
+}
+.keirekiTbl dl {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.keirekiTbl dt {
+	color: red;
+	margin-top: 0px;
+}
+.keirekiTbl dd {
+	margin-left: 12px;
+	margin-bottom: 4px;
+}
+/* 横幅一定以下 */
+@media screen and (max-width: 440px) {
+	.keirekiTbl table {
+		border-collapse: separate;
+		width: 100%;
+		min-width: auto;
+	}
+	.keirekiTbl thead {
+		display: none;
+	}
+	.keirekiTbl tbody th {
+		display: block;
+		margin: 2px;
+		width: auto;
+	}
+	.keirekiTbl tr {
+		display: block;
+		border-width: 1;
+		border-color: black;
+		border-style: solid;
+		background: lightyellow;
+		margin-bottom: 2px;
+	}
+	.keirekiTbl td {
+		display: block;
+		border-style: none;
+		padding-bottom: 4px;
+	}
+}
+
