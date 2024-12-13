@@ -21,8 +21,14 @@
 	<script type="text/javascript" src="/js/custom_ajax.js?202141214"></script>
 	<script type="text/javascript" src="/js/contents_edit_utils.js?202141214"></script>
 	<script>
-		// 共通ヘッダ読込み
-		loadCommonHeader();
+		// コンテンツ読込み初期処理
+		document.addEventListener(
+			"DOMContentLoaded"
+			, function() {
+				// 共通ヘッダ読込み
+				loadCommonHeader();
+			}
+		);
 	</script>
 
 	<div id="divCommonHeader" class="commonHeader"></div><!-- .divCommonHeader -->
