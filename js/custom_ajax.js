@@ -1,5 +1,5 @@
 
-let _ajaxResponseCallBackFunc = null;				// ajax応答コールバック処理 ※デフォルト：なし
+let _ajaxResponseCallBackFunc = null;								// ajax応答コールバック処理 ※デフォルト：なし
 
 /**
  * ajax応答コールバック初期処理
@@ -61,7 +61,7 @@ function ajaxRequext(targetTagId, requestUrl, postFormTagId, method, isAsync) {
 						// 応答コールバック処理あり
 						if ( _ajaxResponseCallBackFunc != null ) {
 							// 応答コールバック処理実行
-							_ajaxResponseCallBackFunc(refreshHtml);
+							refreshHtml = _ajaxResponseCallBackFunc(refreshHtml);
 
 						// 応答コールバック処理なし
 						} else {
@@ -280,7 +280,7 @@ function ajaxFetch(targetTagId, requestUrl, postFormTagId, method) {
 					// 応答コールバック処理あり
 					if ( _ajaxResponseCallBackFunc != null ) {
 						// 応答コールバック処理実行
-						_ajaxResponseCallBackFunc(refreshHtml);
+						refreshHtml = _ajaxResponseCallBackFunc(refreshHtml);
 
 					// 応答コールバック処理なし
 					} else {

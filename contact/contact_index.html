@@ -24,7 +24,20 @@
 		// ajax応答コールバック初期処理
 		initAjaxResponseCallBack(
 			function(html) {
-				console.log(html);
+
+				// HTML文字列をパースしてDOMオブジェクトを作成
+				const parser = new DOMParser();
+				const htmlDoc = parser.parseFromString(html, 'text/html');
+
+				// 共通ヘッダの要素を取得
+				const commonHeaderElement = htmlDoc.getElementById('divCommonHeader');
+
+				// テキストを取得
+				const retHtml = commonHeaderElement ? commonHeaderElement.innerHTML : null;
+
+				console.log(retHtml); // 結果: "これは取得したいテキストです"
+
+				return retHtml;
 			}
 		);
 
