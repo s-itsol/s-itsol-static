@@ -249,6 +249,9 @@ body {
 	font-weight: normal;
 	text-align: left;
 }
+.keirekiTbl th.no {
+	width: 24px;
+}
 .keirekiTbl th.term {
 	width: 88px;
 }
